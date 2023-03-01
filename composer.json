@@ -1,0 +1,65 @@
+{
+    "name": "preemstudio/laravel-manager",
+    "description": "A package to easily use managers with Laravel.",
+    "keywords": [
+        "PreemStudio",
+        "laravel",
+        "laravel-manager"
+    ],
+    "homepage": "https://github.com/preemstudio/laravel-manager",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "brian@preem.studio",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "spatie/laravel-package-tools": "^1.1",
+        "illuminate/contracts": "^10.0"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.2",
+        "graham-campbell/analyzer": "^4.0",
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^1.2",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "pestphp/pest-plugin-mock": "^1.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "spatie/laravel-ray": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "PreemStudio\\Manager\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true,
+            "ergebnis/composer-normalize": true
+        },
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
