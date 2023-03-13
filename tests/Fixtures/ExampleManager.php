@@ -6,7 +6,7 @@ namespace Tests\Fixtures;
 
 use PreemStudio\Manager\AbstractManager;
 
-class ExampleManager extends AbstractManager
+final class ExampleManager extends AbstractManager
 {
     protected function createConnection(array $config): ExampleClass
     {

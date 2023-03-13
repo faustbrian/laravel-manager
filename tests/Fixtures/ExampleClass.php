@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Fixtures;
 
-class ExampleClass extends AbstractClass
+final class ExampleClass extends AbstractClass
 {
     //
 }

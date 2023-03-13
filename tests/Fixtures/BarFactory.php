@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Fixtures;
 
-class BarFactory
+final class BarFactory
 {
     public static function create(array $config): BarClass
     {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Fixtures;
 
-class BarClass extends AbstractClass
+final class BarClass extends AbstractClass
 {
     //
 }
