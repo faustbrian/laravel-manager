@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+namespace Tests\Unit;
+
+use InvalidArgumentException;
 use Tests\Fixtures\BarClass;
 use Tests\Fixtures\BarFactory;
 use Tests\Fixtures\ExampleClass;
