@@ -10,7 +10,7 @@ use Tests\Fixtures\BarFactory;
 use Tests\Fixtures\ExampleClass;
 use Tests\Fixtures\FooClass;
 
-it('should have a connection with a name', function () {
+it('should have a connection with a name', function (): void {
     $manager = getConfigManager(['driver' => 'manager']);
 
     expect($manager->getConnections())->toBe([]);
@@ -35,7 +35,7 @@ it('should have a connection with a name', function () {
     expect($manager->getConnections())->toBe([]);
 });
 
-it('should return the default connection if the connection name is not provided', function () {
+it('should return the default connection if the connection name is not provided', function (): void {
     $manager = getConfigManager(['driver' => 'manager']);
 
     $manager->getConfig()
@@ -71,7 +71,7 @@ it('should return the default connection if the connection name is not provided'
     expect($manager->getConnections())->toBe([]);
 });
 
-it('should throw an exception if the connection is not configured', function () {
+it('should throw an exception if the connection is not configured', function (): void {
     $manager = getManager();
 
     $manager->getConfig()
@@ -84,7 +84,7 @@ it('should throw an exception if the connection is not configured', function () 
     $manager->connection('error');
 })->throws(InvalidArgumentException::class, 'Connection [error] not configured.');
 
-it('should change the default connection', function () {
+it('should change the default connection', function (): void {
     $manager = getManager();
 
     $manager->getConfig()
@@ -108,7 +108,7 @@ it('should change the default connection', function () {
     expect($manager->getDefaultConnection())->toBe('new');
 });
 
-it('should register an extension with a callable function', function () {
+it('should register an extension with a callable function', function (): void {
     $manager = getManager();
 
     $manager->getConfig()
@@ -128,7 +128,7 @@ it('should register an extension with a callable function', function () {
     expect($manager->getConnections())->toHaveKey('foo');
 });
 
-it('should register an extension with a callable array', function () {
+it('should register an extension with a callable array', function (): void {
     $manager = getManager();
 
     $manager->getConfig()

@@ -23,10 +23,10 @@ abstract class AbstractManager implements Manager
 
     public function __call(string $method, array $parameters)
     {
-        return $this->connection()->$method(...$parameters);
+        return $this->connection()->{$method}(...$parameters);
     }
 
-    public function connection(string $name = null): object
+    public function connection(?string $name = null): object
     {
         $name ??= $this->getDefaultConnection();
 
@@ -35,7 +35,7 @@ abstract class AbstractManager implements Manager
         return $this->connections[$name];
     }
 
-    public function reconnect(string $name = null): object
+    public function reconnect(?string $name = null): object
     {
         $name ??= $this->getDefaultConnection();
 
@@ -44,18 +44,14 @@ abstract class AbstractManager implements Manager
         return $this->connection($name);
     }
 
-    public function disconnect(string $name = null): void
+    public function disconnect(?string $name = null): void
     {
         $name ??= $this->getDefaultConnection();
 
         unset($this->connections[$name]);
     }
 
-    abstract protected function createConnection(array $config): object;
-
-    abstract protected function getConfigName(): string;
-
-    public function getConnectionConfig(string $name = null): array
+    public function getConnectionConfig(?string $name = null): array
     {
         $name ??= $this->getDefaultConnection();
 
@@ -91,6 +87,10 @@ abstract class AbstractManager implements Manager
         return $this->config;
     }
 
+    abstract protected function createConnection(array $config): object;
+
+    abstract protected function getConfigName(): string;
+
     protected function makeConnection(string $name): object
     {
         $config = $this->getConnectionConfig($name);
@@ -112,8 +112,8 @@ abstract class AbstractManager implements Manager
     {
         $data = $this->config->get($this->getConfigName().'.'.$type);
 
-        if (! is_array($config = Arr::get($data, $name)) && ! $config) {
-            throw new InvalidArgumentException("$description [$name] not configured.");
+        if (!\is_array($config = Arr::get($data, $name)) && !$config) {
+            throw new InvalidArgumentException("{$description} [{$name}] not configured.");
         }
 
         $config['name'] = $name;

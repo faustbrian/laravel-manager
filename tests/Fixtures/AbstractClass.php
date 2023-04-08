@@ -12,7 +12,7 @@ abstract class AbstractClass
 
     public function __construct(string $name, string $driver)
     {
-        $this->name   = $name;
+        $this->name = $name;
         $this->driver = $driver;
     }
 
