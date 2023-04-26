@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Manager;
 
+use BombenProdukt\Manager\Contracts\Manager;
 use Closure;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
-use BombenProdukt\Manager\Contracts\Manager;
 
 abstract class AbstractManager implements Manager
 {
