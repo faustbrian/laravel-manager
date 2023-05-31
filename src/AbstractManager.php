@@ -87,10 +87,6 @@ abstract class AbstractManager implements Manager
         return $this->config;
     }
 
-    abstract protected function createConnection(array $config): object;
-
-    abstract protected function getConfigName(): string;
-
     protected function makeConnection(string $name): object
     {
         $config = $this->getConnectionConfig($name);
@@ -120,4 +116,8 @@ abstract class AbstractManager implements Manager
 
         return $config;
     }
+
+    abstract protected function createConnection(array $config): object;
+
+    abstract protected function getConfigName(): string;
 }
