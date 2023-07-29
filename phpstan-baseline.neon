@@ -21,6 +21,21 @@ parameters:
 			path: src/AbstractManager.php
 
 		-
+			message: "#^Only booleans are allowed in a negated boolean, mixed given\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
 			message: "#^Parameter \\#1 \\$array of static method Illuminate\\\\Support\\\\Arr\\:\\:get\\(\\) expects array\\|ArrayAccess, mixed given\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Variable method call on object\\.$#"
 			count: 1
 			path: src/AbstractManager.php
