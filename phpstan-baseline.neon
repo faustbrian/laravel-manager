@@ -1,0 +1,151 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Cannot call method in\\(\\) on iterable\\<SplFileInfo\\>\\.$#"
+			count: 1
+			path: .php-cs-fixer.php
+
+		-
+			message: "#^Cannot access offset 'name' on mixed\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:__call\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:__call\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:createConnection\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:getConnectionConfig\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:getConnections\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:getDefaultConnection\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:getNamedConfig\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:getNamedConfig\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Only booleans are allowed in &&, mixed given on the left side\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Only booleans are allowed in a negated boolean, mixed given\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Parameter \\#1 \\$array of static method Illuminate\\\\Support\\\\Arr\\:\\:get\\(\\) expects array\\|ArrayAccess, mixed given\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Parameter \\#1 \\$key of function array_key_exists expects int\\|string, mixed given\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Property BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:\\$connections type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Property BaseCodeOy\\\\Manager\\\\AbstractManager\\:\\:\\$extensions type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Variable method call on object\\.$#"
+			count: 1
+			path: src/AbstractManager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\Contracts\\\\Connector\\:\\:connect\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Contracts/Connector.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\Contracts\\\\Manager\\:\\:getConnectionConfig\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Contracts/Manager.php
+
+		-
+			message: "#^Method BaseCodeOy\\\\Manager\\\\Contracts\\\\Manager\\:\\:getConnections\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Contracts/Manager.php
+
+		-
+			message: "#^Method Tests\\\\Fixtures\\\\BarFactory\\:\\:create\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Fixtures/BarFactory.php
+
+		-
+			message: "#^Method Tests\\\\Fixtures\\\\ExampleManager\\:\\:createConnection\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Fixtures/ExampleManager.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Contracts\\\\Config\\\\Repository\\:\\:shouldReceive\\(\\)\\.$#"
+			count: 1
+			path: tests/Helpers.php
+
+		-
+			message: "#^Function getConfigManager\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Helpers.php
+
+		-
+			message: "#^Parameter \\#1 \\$configRepository of class Tests\\\\Fixtures\\\\ExampleManager constructor expects Illuminate\\\\Contracts\\\\Config\\\\Repository, Mockery\\\\MockInterface given\\.$#"
+			count: 1
+			path: tests/Helpers.php
+
+		-
+			message: "#^Undefined variable\\: \\$this$#"
+			count: 1
+			path: tests/Pest.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Contracts\\\\Config\\\\Repository\\:\\:shouldReceive\\(\\)\\.$#"
+			count: 8
+			path: tests/Unit/AbstractManagerTest.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:getDriver\\(\\)\\.$#"
+			count: 6
+			path: tests/Unit/AbstractManagerTest.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:getName\\(\\)\\.$#"
+			count: 6
+			path: tests/Unit/AbstractManagerTest.php
+
+		-
+			message: "#^Unable to resolve the template type TValue in call to function expect$#"
+			count: 12
+			path: tests/Unit/AbstractManagerTest.php
